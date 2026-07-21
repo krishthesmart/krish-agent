@@ -1,0 +1,110 @@
+================================================================================
+              KRISH-AGENT INFINITY - EXACT COMMANDS FOR YOUR MAC
+================================================================================
+
+🍎 OPEN TERMINAL
+Press: Cmd + Space
+Type: Terminal
+Press: Enter
+
+================================================================================
+COPY & PASTE THIS COMMAND INTO YOUR TERMINAL:
+================================================================================
+
+cd "/Users/arulmeiyappan/Library/Application Support/Claude/local-agent-mode-sessions/c1c5d89d-3124-40f7-a4d7-053be9fd2046/1cf084d6-6f27-474e-9a4b-8e90c37b42ff/local_e90673fe-2333-48de-b5c1-1637c478f607/outputs" && bash FIX_AND_PUBLISH.sh
+
+================================================================================
+
+That's it! This single command will:
+
+1. Navigate to your outputs folder
+2. Clean old builds
+3. Build your package fresh
+4. Create dist/ folder with files
+5. Ask if you want to upload
+6. Upload to PyPI
+7. Show success message
+
+================================================================================
+
+WHAT YOU'LL SEE:
+
+✓ Step 1: Checking location...
+✓ Step 2: Cleaning old builds...
+✓ Step 3: Building package (10-15 seconds)...
+✓ Step 4: Files created
+✓ Step 5: Distribution files verified
+
+Then it will ask:
+"Upload to PyPI now? (yes/no):"
+
+Type: yes
+Press: Enter
+
+================================================================================
+
+WHEN IT ASKS FOR CREDENTIALS:
+
+Username: __token__
+Password: [Paste your PyPI API token here]
+
+Get your token from: https://pypi.org/manage/account/
+
+================================================================================
+
+ALTERNATIVE: DO IT STEP BY STEP
+
+If you want to do it manually, copy these commands one at a time:
+
+# Step 1: Navigate
+cd "/Users/arulmeiyappan/Library/Application Support/Claude/local-agent-mode-sessions/c1c5d89d-3124-40f7-a4d7-053be9fd2046/1cf084d6-6f27-474e-9a4b-8e90c37b42ff/local_e90673fe-2333-48de-b5c1-1637c478f607/outputs"
+
+# Step 2: Clean old builds
+rm -rf dist/ build/ *.egg-info
+
+# Step 3: Build fresh
+python3 setup.py sdist bdist_wheel
+
+# Step 4: Verify (should see .whl and .tar.gz files)
+ls -lh dist/
+
+# Step 5: Upload
+twine upload dist/*
+
+================================================================================
+
+STUCK? TRY THIS:
+
+# Make sure twine is installed
+pip3 install twine
+
+# Make sure wheel is installed
+pip3 install wheel
+
+# Then run the build command again
+python3 setup.py sdist bdist_wheel
+
+================================================================================
+
+SUCCESS SIGNS:
+
+You'll see something like:
+  Uploading krish_agent-3.0.0-GODMODE-py3-none-any.whl
+  Uploading krish-agent-3.0.0-GODMODE.tar.gz
+  View at: https://pypi.org/project/krish-agent/3.0.0-GODMODE/
+
+Then you can:
+  pip install krish-agent==3.0.0-GODMODE
+
+And test:
+  python3 -c "from krish_agent.godmode import FinalForm; print('✓')"
+
+================================================================================
+
+READY? COPY THIS INTO TERMINAL NOW:
+
+cd "/Users/arulmeiyappan/Library/Application Support/Claude/local-agent-mode-sessions/c1c5d89d-3124-40f7-a4d7-053be9fd2046/1cf084d6-6f27-474e-9a4b-8e90c37b42ff/local_e90673fe-2333-48de-b5c1-1637c478f607/outputs" && bash FIX_AND_PUBLISH.sh
+
+================================================================================
+                        LET'S SHIP THIS! 🚀
+================================================================================

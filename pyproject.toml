@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=40.8.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "krish-agent"
+version = "3.0.0"
+description = "KRISH-AGENT INFINITY: The ultimate AI coding assistant. 1 billion% better with GODMODE, HYPERINFINITY, and QUANTUM UNIVERSE capabilities."
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "Arul Meiyappan Kannappan", email = "arulmeiyappankannappan@gmail.com"}
+]
+keywords = ["ai", "coding", "agent", "godmode", "hyperinfinity", "quantum"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.14",
+]
+
+dependencies = [
+    "requests>=2.28.0",
+    "rich>=12.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "black>=22.0",
+    "flake8>=4.0",
+    "mypy>=0.950",
+]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/krish-agent"
+Documentation = "https://github.com/yourusername/krish-agent"
+Repository = "https://github.com/yourusername/krish-agent"
+Issues = "https://github.com/yourusername/krish-agent/issues"
+
+[project.scripts]
+krish-agent = "krish_agent.cli:main"
